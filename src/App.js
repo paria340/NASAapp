@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+
+import NasaApi from './components/NasaApi';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='intro'>
+        <h1>Spacetagram</h1>
+        <p>Brought to you by NASA's image api</p>
+      </div>
+      <NasaApi />
+      <footer>
+        <p>Made by Parisa for Shopify</p>
+      </footer>
     </div>
   );
 }
