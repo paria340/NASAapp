@@ -5,11 +5,20 @@ function NasaApi() {
     const [data, setData] = useState([])
     const [like, setLike] = useState([false, false, false, false, false, false, false, false, false, false])
     const [loading, setLoading] = useState(false);
-
+    
     useEffect(() => {
         handleQuery()
-        
-      }, [])
+        const data = window.localStorage.getItem('likes')
+        if(data) {
+            setLike(JSON.parse(data))
+        }
+    }, [])
+
+    useEffect(() => {
+        // handleQuery()
+        window.localStorage.setItem('likes', JSON.stringify(like))
+    }, [like])
+
 
     const handleQuery = () => {
         const apiKey = 'PKW8W4L6a7m3FJOQSruIS7RJsyTEstuuW32tmYGD'
