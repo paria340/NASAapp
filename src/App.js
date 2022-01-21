@@ -11,7 +11,7 @@ function App() {
       </div>
       <NasaApi />
       <footer>
-        <p>Made by Parisa for Shopify</p>
+        <p>Made by Parisa Moshfegh for Shopify</p>
       </footer>
     </div>
   );
